@@ -1,0 +1,34 @@
+<header class="app-header">
+    <div class="container">
+      <div class="header-left">
+        <img [src]="logoSrc" alt="Logo">
+      </div>
+      <div class="header-center" >
+        <ul>
+          <!-- <li><a href="#">Dashboard</a></li> -->
+          <!-- <li><a href="#" [ngStyle]="{'color': theme === 'light' ? '#141518' : '#E0E0E0'}">Online market</a></li>
+          <li><a href="#" [ngStyle]="{'color': theme === 'light' ? '#141518' : '#E0E0E0'}">Offline market</a></li>
+          <li><a href="#" [ngStyle]="{'color': theme === 'light' ? '#141518' : '#E0E0E0'}">Wallet</a></li> -->
+
+        <li><a href="#" [ngClass]="toggleTheme">Online market</a></li>
+        <li><a href="#" [ngClass]="toggleTheme">Offline market</a></li>
+        <li><a href="#" [ngClass]="toggleTheme">Wallet</a></li>
+
+        </ul>
+      </div>
+  
+      <div class="header-right">
+        <ul>
+          <!-- <li>
+            <a href="#">Home</a>
+          </li> -->
+        <li >
+            <app-theme (themeChange)="theme = $event" ></app-theme>
+        </li>
+          <li>
+            <app-metamask></app-metamask>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>

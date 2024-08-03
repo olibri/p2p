@@ -1,14 +1,15 @@
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-/* styles.css */
-body.light {
-    background-color: #AEA7A3;
-    color: #242323;
+body { margin: 0; font-family: "Montserrat", sans-serif;
+}
+body.dark {
+    background-color: #141518;
+    color: #E0E0E0 ;
+    
   }
   
-  body.dark {
-    background-color: #242323;
-    color: #AEA7A3;
+  body.light {
+    background-color: #E0E0E0 ;
+    color: #141518;
   }
   
