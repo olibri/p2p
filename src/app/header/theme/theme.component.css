@@ -3,7 +3,6 @@
     border: none; /* Removes any border */
     padding: 0; /* Reduces padding to zero */
     cursor: pointer;
-
 }
 
 .theme-toggle-button img {
@@ -11,5 +10,4 @@
     height: auto; /* Maintains aspect ratio */
     display: block; /* Ensures no extra space within the button */
     cursor: pointer;
-
 }

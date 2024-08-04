@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, NgClass, NgStyle } from '@angular/common';
+import { ThemeComponent } from '../theme/theme.component';
 declare global {
   interface Window {
       ethereum: any;
@@ -8,15 +9,22 @@ declare global {
 @Component({
   selector: 'app-metamask',
   standalone: true,
-  imports: [],
+  imports: [
+    ThemeComponent,
+    NgClass
+  ],
   templateUrl: './metamask.component.html',
   styleUrl: './metamask.component.css'
 })
 export class MetamaskComponent implements OnInit {
-
+  
+  @Input() theme: string = 'light'; // приймаємо тему як вхідний параметр
+  
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-
+  // get currentTheme(): string {
+  //   return this.theme;
+  // }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -27,7 +35,6 @@ export class MetamaskComponent implements OnInit {
       }
     }
   }
-
 
   async signInWithMetaMask() {
     if (window.ethereum) {

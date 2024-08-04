@@ -5,11 +5,15 @@ body { margin: 0; font-family: "Montserrat", sans-serif;
 body.dark {
     background-color: #141518;
     color: #E0E0E0 ;
-    
+    transition: background-color 0.5s ease, color 1.5s ease 0.3s;    
   }
   
   body.light {
     background-color: #E0E0E0 ;
     color: #141518;
+    transition: background-color 0.5s ease, color 1.5s ease 0.3s;
+  }
+  label{
+    font-family: "Montserrat", sans-serif
   }
   

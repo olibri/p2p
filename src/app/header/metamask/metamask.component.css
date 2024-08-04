@@ -3,13 +3,21 @@
     border: none; /* Removes any border */
     padding: 0; /* Reduces padding to zero */
     cursor: pointer;
-
 }
 
 .metamask-button img {
     width: 24px; /* Set a smaller width, adjust as needed */
     height: auto; /* Maintains aspect ratio */
-    display: block; /* Ensures no extra space within the button */
+    cursor: pointer;
+}
+/* label{
     cursor: pointer;
 }
 
+.light{
+    color: #e0e0e0;
+}
+
+.dark{
+    color: #141518;
+} */
