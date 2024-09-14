@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { Router, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
+import { CommonModule } from '@angular/common';
+import { OnlineMarketComponent } from './online-market/online-market.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,8 +13,11 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     RouterOutlet, 
     MatButtonModule,
-    HeaderComponent
+    HeaderComponent,
+    CommonModule,
+    OnlineMarketComponent,
   ],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

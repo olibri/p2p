@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "NFT": {
+    "p2p": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/nft",
+            "outputPath": "dist/p2p",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,13 +62,27 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options":{
+            "proxyConfig": "proxy.conf.json",
+            "prebundle": {
+              "exclude": [
+                "google-protobuf",
+                "google-protobuf/google/protobuf/any_pb.js",
+                "@improbable-eng/grpc-web",
+                "google-protobuf/google/protobuf/descriptor_pb.js"
+              ]
+            },
+            "ssl": true,
+            "sslKey": "key.pem",
+            "sslCert": "cert.pem"
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "NFT:build:production"
+              "buildTarget": "p2p:build:production"
             },
             "development": {
-              "buildTarget": "NFT:build:development"
+              "buildTarget": "p2p:build:development"
             }
           },
           "defaultConfiguration": "development"
