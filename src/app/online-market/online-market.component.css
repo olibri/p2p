@@ -1,8 +1,9 @@
 
 .container {
+    padding: 20px 0 20px 0;
     display: flex;
-    justify-content: center; /* Centralize the main container */
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     width: 100%;
     position: relative; /* Allows absolute positioning relative to this container */
 }
@@ -37,6 +38,7 @@
 }
 
 .p2pType{
+    margin-left: 250px;
     font-size: 25px;
     text-decoration: none;
     list-style: none;

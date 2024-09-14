@@ -1,10 +1,13 @@
 <!-- online-market.component.html -->
-<div class="container" [ngClass]="theme">
+<div  class="container">
     <div class="p2pType">
       <ul>
-        <li><a href="#" [ngClass]="toggleTheme">Express</a></li>
-        <li><a href="#" [ngClass]="toggleTheme">P2P</a></li>
+        <li><a [ngClass]="toggleTheme" [routerLink]='["/online-market/express"]'>Express</a></li>
+        <li><a [ngClass]="toggleTheme" [routerLink]='["/online-market/p2p"]'>P2P</a></li>
       </ul>
+
     </div>  
-</div>
+  </div>
+<hr>
+<router-outlet></router-outlet>
   
