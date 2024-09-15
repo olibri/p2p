@@ -1,4 +1,5 @@
 .container {
+    padding-top: 0px;
     display: flex;      /* Включення flexbox, що дозволяє дочірнім елементам вирівнюватися горизонтально */
     flex-wrap: nowrap;  /* Запобігає переносу елементів на новий рядок */
     overflow-x: auto;   /* Додає горизонтальний скролінг, якщо контент не вміщується */
@@ -14,8 +15,99 @@
     border: 1px solid #f3ef52; /* Межа для візуалізації меж блоків */
     border-radius: 15px;
     box-sizing: border-box; /* Включає padding і border в загальну ширину елемента */
+    margin: 10px;
 }
 
 .TextExpress div, .TradeExpress div {
     text-align: center; /* Центрування тексту в кожному блоку */
+}
+
+
+
+
+
+
+.trade-express {
+    color: black;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f3ef52;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.textMakeTrade {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+.tab-buttons {
+    display: flex;
+    margin: 20px 0;
+    border-bottom: none; /* Remove bottom border */
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 0.7px solid black; /* Set border width to 0.7px */
+    border-radius: 15px; /* Rounded corners with a radius of 15px */
+}
+
+.tab-btn.active {
+    background-color: transparent;
+    color: black;
+    border: none; /* Completely remove the border for the active button */
+}
+
+.tab-btn.inactive {
+    background-color: black;
+    color: white;
+    border-radius: 15px; /* Ensure inactive buttons also have rounded corners */
+}
+
+
+
+
+
+.input-group {
+    margin: 20px 0;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.quick-amounts button, .continue-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    width: 100%; /* Ensure full width coverage */
+}
+
+.continue-btn {
+    padding: 15px;
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+}
+
+.other-orders a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
 }

@@ -5,9 +5,31 @@
         <div>P2P Express finds the best USDT buy offer for you from the current advertisements in the P2P Zone</div>
     </div>
 
-    <div class="TradeExpress">
-        <div><h1>Express</h1></div>
-        <div><h1>Buy USDT with UAH</h1></div>
-        <div>P2P Express finds the best USDT buy offer for you from the current advertisements in the P2P Zone</div>
-
+    <div class="trade-express">
+        <div class="textMakeTrade">Make a trade</div>
+        <div class="trade-container">
+            <div class="tab-buttons">
+                <button class="tab-btn" [ngClass]="{'active': activeTab === 'buy', 'inactive': activeTab !== 'buy'}" (click)="activeTab = 'buy'">BUY</button>
+                <button class="tab-btn" [ngClass]="{'active': activeTab === 'sell', 'inactive': activeTab !== 'sell'}" (click)="activeTab = 'sell'">SELL</button>
+            </div>
+            
+            <div class="input-group">
+                <label>You Pay</label>
+                <input type="text" placeholder="400-500000">
+                <select>
+                    <option>UAH</option>
+                    <option>USD</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>You Receive</label>
+                <input type="text" placeholder="10-5000">
+                <select>
+                    <option>USDT</option>
+                    <option>BTC</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
 </div>
