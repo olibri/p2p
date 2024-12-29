@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2, Inject, PLATFORM_ID, Output, EventEmitter } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { ThemeService } from 'app/ThemeService';
+import { ThemeService } from 'app/themeService'; 
+
 @Component({
   selector: 'app-theme',
   standalone: true,

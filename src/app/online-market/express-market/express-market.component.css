@@ -2,57 +2,57 @@
     padding-top: 0px;
     display: flex;      /* Включення flexbox, що дозволяє дочірнім елементам вирівнюватися горизонтально */
     flex-wrap: nowrap;  /* Запобігає переносу елементів на новий рядок */
-    overflow-x: auto;   /* Додає горизонтальний скролінг, якщо контент не вміщується */
+    overflow-x: auto;   
+    height: calc(100vh - 170px);  
+    
 }
 
 .TextExpress, .TradeExpress {
-    display: flex;      /* Знову використовуємо flexbox для внутрішніх контейнерів */
-    flex-grow: 1;       /* Дозволяє кожному блоку розширюватись для заповнення доступного простору */
-    justify-content: space-around; /* Розподіляє простір навколо елементів всередині контейнера */
-    align-items: center; /* Вирівнювання елементів по вертикалі */
-    min-width: 300px;   /* Мінімальна ширина кожного блоку, щоб забезпечити читабельність */
-    padding: 10px;      /* Внутрішні відступи для кращої візуалізації */
-    border: 1px solid #f3ef52; /* Межа для візуалізації меж блоків */
+    display: flex;      
+    flex-grow: 1;       
+    justify-content: space-around;
+    align-items: center; 
+    min-width: 300px;   
+    padding: 0 10px;      
+    border: 1px solid #f3ef52;
     border-radius: 15px;
-    box-sizing: border-box; /* Включає padding і border в загальну ширину елемента */
-    margin: 10px;
+    box-sizing: border-box;
 }
 
 .TextExpress div, .TradeExpress div {
-    text-align: center; /* Центрування тексту в кожному блоку */
+    text-align: center;
 }
-
-
-
-
 
 
 .trade-express {
     color: black;
-    width: 90%;
+    width: 25%;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 0 20px;
+    height: 100%;
     background-color: #f3ef52;
     padding: 20px;
+    border: 1px;
+    border-radius: 15px;
     box-sizing: border-box; /* Include padding in width calculations */
+    gap: 10;
 }
 
 .textMakeTrade {
     font-size: 30px;
     text-align: center;
-    margin-bottom: 20px; /* Add some space below the title */
+    height: 50px;
 }
 
 .tab-buttons {
     display: flex;
-    margin: 20px 0;
     border-bottom: none; /* Remove bottom border */
 }
 
 .tab-buttons {
     display: flex;
-    margin: 20px 0;
     border-bottom: none; /* Remove bottom border */
+    justify-content: space-around;
 }
 
 .tab-btn {
@@ -61,86 +61,167 @@
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border: 0.7px solid black; /* Maintain consistent border */
+    border: 0.7px solid #f3ef52; 
     border-radius: 15px; /* Rounded corners with a radius of 15px */
-    background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 10px,
-        #f3ef52 15px,
-        #f3ef52 20px
-    ); /* Striped background added */
+    background:#000000;
 }
 
-.tab-btn.active {
+.tab-btn.inactive {
     background-color: transparent;
     color: black;
     border: none; /* Completely remove the border for the active button */
 }
 
-.tab-btn.inactive {
+.tab-btn.active  {
     background-color: black;
     color: #f3ef52;
-    background: repeating-linear-gradient(
-        -45deg,
-        black,
-        black 34px,
-        #f3ef52 34px,
-        #f3ef52 35px
-    ); /* Striped background for inactive buttons */
+    background:#000000;
     border-radius: 15px; /* Ensure inactive buttons also have rounded corners */
 }
 
-
-
-
-
 .input-group {
-    margin: 20px 0;
+
+    /* margin: 20px 0; */
     display: block;
 }
 
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+.input-flex #pay-amount {
+    background-color: transparent;
+    width: 100%;               
+    padding: 12px 20px;   
+    height: 40px;      
+    font-size: 24px;            
+    border: none;
+    outline: none;      
+    box-shadow: none;    
+    -moz-appearance: textfield;
+    -ms-appearance: textfield; 
+}
+
+
+
+.input-flex#output {
+    margin-top: 50px;
+}
+
+.input-flex #currency-list {
+    background-color: transparent;
+    padding: 12px 23px;         
+    width: auto;
+    height: 40px;      
+    font-size: 18px;            
+    border: none;
+    outline: none;  
+    box-shadow: none;
+    appearance: none;
+}
+
 .input-group label {
-    display: block; /* Ensures the label is above the input and select */
+    display: block; 
     margin-bottom: 5px;
 }
 
 .input-flex {
+    border: #000000;
+    border: 1px solid #000000;
+    border-radius: 15px;
     display: flex;
-    align-items: center; /* Aligns items vertically centered */
-    gap: 10px; /* Adds space between the input and select */
+    align-items: center; 
+    gap: 10px;           
 }
 
 input[type="text"], select {
-    flex-grow: 1; /* Allows input and select to fill the available space */
+    flex-grow: 1; 
     padding: 10px;
     border: 2px solid black;
     box-sizing: border-box;
 }
-
-input[type="text"] {
-    flex-basis: 70%; /* Takes roughly 70% of the space */
+.chips {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    justify-content: space-between; 
 }
-
-select {
-    flex-basis: 30%; /* Takes roughly 30% of the space */
+.chip {
+    flex: 1;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+.chip:hover {
+    color: #f3ef52;
+    background-color: black;
 }
-
-
 .continue-btn {
+    
+    background: black;
+    color: #f3ef52;
+
     padding: 15px;
-    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    width: 100%;
+    font-size: 20px;
     display: block;
     margin-top: 20px;
 }
-
-.other-orders a {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
+.continue-btn:hover {
+    background-color: transparent;
     color: black;
-    text-decoration: none;
+    cursor: pointer;
 }
 label{
     font-size: 15px;
+}
+
+
+
+.custom-select-container {
+    z-index: 1000; 
+
+    position: relative;
+    width: auto;
+    margin-right: 20px;
+}
+
+.selected-option {
+    background-color: transparent; /* Прозорий фон */
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.options {
+    position: absolute;
+    top: 100%;
+    background-color: transparent; /* Прозорий фон */
+    border-top: none;
+    max-height: 200px;
+    z-index: 1000; 
+}
+
+.option {
+    
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent; /* Прозорий фон */
+    color: #000;
+    z-index: 1000; 
+
+}
+
+.option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }

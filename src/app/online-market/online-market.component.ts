@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, ViewChild, ViewContainerRef,  OnInit } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { ThemeService } from 'app/ThemeService';
+import { ThemeService } from 'app/themeService';
 
 @Component({
   selector: 'app-online-market',

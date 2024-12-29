@@ -3,7 +3,7 @@ import { ThemeComponent } from './theme/theme.component';
 import { MetamaskComponent } from './metamask/metamask.component';
 import { NgClass } from '@angular/common';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { ThemeService } from 'app/ThemeService';
+import { ThemeService } from 'app/themeService';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +12,8 @@ import { ThemeService } from 'app/ThemeService';
     ThemeComponent,
     MetamaskComponent,
     NgClass,
-    RouterOutlet,
     RouterModule
-  ],
+],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
