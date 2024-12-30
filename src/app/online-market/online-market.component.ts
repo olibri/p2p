@@ -4,15 +4,14 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { ThemeService } from 'app/themeService';
 
 @Component({
-  selector: 'app-online-market',
-  standalone: true,
-  imports: [
-    NgClass,
-    RouterOutlet,
-    RouterModule
-  ],
-  templateUrl: './online-market.component.html',
-  styleUrl: './online-market.component.css'
+    selector: 'app-online-market',
+    imports: [
+        NgClass,
+        RouterOutlet,
+        RouterModule
+    ],
+    templateUrl: './online-market.component.html',
+    styleUrl: './online-market.component.css'
 })
 export class OnlineMarketComponent implements OnInit  {
 

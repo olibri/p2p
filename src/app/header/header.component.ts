@@ -6,16 +6,15 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { ThemeService } from 'app/themeService';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    ThemeComponent,
-    MetamaskComponent,
-    NgClass,
-    RouterModule
-],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+    selector: 'app-header',
+    imports: [
+        ThemeComponent,
+        MetamaskComponent,
+        NgClass,
+        RouterModule
+    ],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   isDisabled: boolean = true;  // This can be dynamically set based on your conditions

@@ -9,14 +9,13 @@ declare global {
   }
 }
 @Component({
-  selector: 'app-metamask',
-  standalone: true,
-  imports: [
-    ThemeComponent,
-    NgClass
-  ],
-  templateUrl: './metamask.component.html',
-  styleUrl: './metamask.component.css'
+    selector: 'app-metamask',
+    imports: [
+        ThemeComponent,
+        NgClass
+    ],
+    templateUrl: './metamask.component.html',
+    styleUrl: './metamask.component.css'
 })
 export class MetamaskComponent implements OnInit {
   private       ethereum: any;

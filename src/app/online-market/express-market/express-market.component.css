@@ -8,7 +8,7 @@
 }
 
 .TextExpress, .TradeExpress {
-    display: flex;      
+    /* display: flex;       */
     flex-grow: 1;       
     justify-content: space-around;
     align-items: center; 
@@ -225,3 +225,12 @@ label{
 .option:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+
+
+#chart {
+    
+    max-width: 650px;
+    margin: 35px auto;
+  }
+  

@@ -1,8 +1,22 @@
 <div class="container">
     <div class="TextExpress">
+        
         <div><h1>Express</h1></div>
         <div><h1>Buy USDT with UAH</h1></div>
         <div>P2P Express finds the best USDT buy offer for you from the current advertisements in the P2P Zone</div>
+
+        <div id="chart">
+            <apx-chart
+              [series]="chartOptions.series"
+              [chart]="chartOptions.chart"
+              [xaxis]="chartOptions.xaxis"
+              [stroke]="chartOptions.stroke"
+              [tooltip]="chartOptions.tooltip"
+              [dataLabels]="chartOptions.dataLabels"
+            ></apx-chart>
+          </div>
+          
+
     </div>
 
     <div class="trade-express">

@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 
-@Component({
-  selector: 'app-p2-pmarker',
-  standalone: true,
-  imports: [],
-  templateUrl: './p2-pmarker.component.html',
-  styleUrl: './p2-pmarker.component.css'
-})
+import { NgApexchartsModule } from "ng-apexcharts";
+import { CommonModule } from '@angular/common';
+
 export class P2PMarkerComponent {
+  
 
 }
